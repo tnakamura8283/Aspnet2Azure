@@ -26,5 +26,13 @@ namespace MvcPrimer.Controllers
 
             return View();
         }
+
+        public ActionResult Canada()
+        {
+            ViewBag.Message = "Your canada page.";
+
+            return View();
+        }
+
     }
 }

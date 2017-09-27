@@ -1,0 +1,15 @@
+﻿@model IEnumerable<System.Diagnostics.Process>
+
+@{
+    ViewBag.Title = "Processes running in my Windows O/S {using a concrete class}";
+}
+
+<h4>@ViewBag.Title</h4>
+
+<ul>
+	@foreach (var i in Model)
+	{
+		<li>@Html.ActionLink(i.ProcessName, "Details", new { id = i.Id })</li>
+	}
+</ul>
+@Html.Partial("_MadeInCanada")

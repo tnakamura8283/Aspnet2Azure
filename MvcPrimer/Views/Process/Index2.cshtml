@@ -1,0 +1,18 @@
+﻿
+@{
+	ViewBag.Title = "Processes running in my Windows O/S";
+
+	string[] names = { "Bob", "Tom", "Sam", "Joe", "Sue" };
+
+	var processes = ViewBag.MyProcesses as System.Diagnostics.Process[];
+}
+
+<h2>@ViewBag.Title</h2>
+
+<ul>
+	@foreach (var i in processes)
+	{
+		<li>@i.ProcessName</li>
+	}
+</ul>
+@Html.Partial("_MadeInCanada")
